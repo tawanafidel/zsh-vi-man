@@ -4,7 +4,7 @@
 
 **Smart man page lookup for zsh vi mode**
 
-Press `K` on any command or option to instantly open its man page—just like in vim!
+Press `Shift-K` on any command or option to instantly open its man page
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Zsh](https://img.shields.io/badge/Shell-Zsh-green.svg)](https://www.zsh.org/)
@@ -24,7 +24,9 @@ Press `K` on any command or option to instantly open its man page—just like in
 <td width="50%">
 
 ### 🎯 Smart Detection
+
 Automatically finds the right man page for subcommands
+
 ```
 git commit → man git-commit
 docker run → man docker-run
@@ -34,9 +36,11 @@ docker run → man docker-run
 <td width="50%">
 
 ### 🔍 Option Jumping
+
 Opens man page directly at the option definition
+
 ```
-grep -r → jumps to -r entry
+grep -r    → jumps to -r entry
 ls --color → jumps to --color entry
 ```
 
@@ -46,20 +50,24 @@ ls --color → jumps to --color entry
 <td width="50%">
 
 ### 🔗 Combined Options
+
 Works with combined short options
+
 ```
-rm -rf → finds both -r and -f
-tar -xvf → finds -x, -v, -f
+rm -rf    → finds both -r and -f
+tar -xvf  → finds -x, -v, -f
 ```
 
 </td>
 <td width="50%">
 
 ### 📝 Value Extraction
+
 Handles options with values
+
 ```
---color=always → searches --color
---output=file.txt → searches --output
+--color=always     → searches --color
+--output=file.txt  → searches --output
 ```
 
 </td>
@@ -68,17 +76,21 @@ Handles options with values
 <td width="50%">
 
 ### 🔀 Pipe Support
+
 Detects correct command in pipelines
+
 ```
-cat file | grep -i → opens man grep
-tree | less -N → opens man less
+cat file | grep -i  → opens man grep
+tree | less -N      → opens man less
 ```
 
 </td>
 <td width="50%">
 
 ### 🛠️ Multiple Formats
+
 Supports various man page styles
+
 ```
 GNU: -R, -r, --recursive
 jq:  --slurp / -s:
@@ -99,15 +111,18 @@ find: -name, -type, -exec
 ```zsh
 zinit light TunaCuma/zsh-vi-man
 ```
+
 </details>
 
 <details>
 <summary><b>antidote</b></summary>
 
 Add to your `.zsh_plugins.txt`:
+
 ```
 TunaCuma/zsh-vi-man
 ```
+
 </details>
 
 <details>
@@ -119,9 +134,11 @@ git clone https://github.com/TunaCuma/zsh-vi-man \
 ```
 
 Then add to your `.zshrc`:
+
 ```zsh
 plugins=(... zsh-vi-man)
 ```
+
 </details>
 
 <details>
@@ -131,6 +148,7 @@ plugins=(... zsh-vi-man)
 git clone https://github.com/TunaCuma/zsh-vi-man ~/.zsh-vi-man
 echo 'source ~/.zsh-vi-man/zsh-vi-man.plugin.zsh' >> ~/.zshrc
 ```
+
 </details>
 
 <br>
@@ -146,14 +164,14 @@ echo 'source ~/.zsh-vi-man/zsh-vi-man.plugin.zsh' >> ~/.zshrc
 
 ### Examples
 
-| Command | Cursor On | Result |
-|:--------|:----------|:-------|
-| `ls -la` | `ls` | Opens `man ls` |
-| `ls -la` | `-la` | Opens `man ls`, jumps to `-l` |
-| `git commit --amend` | `commit` | Opens `man git-commit` |
-| `grep --color=auto` | `--color=auto` | Opens `man grep`, jumps to `--color` |
-| `cat file \| sort -r` | `-r` | Opens `man sort`, jumps to `-r` |
-| `find . -name "*.txt"` | `-name` | Opens `man find`, jumps to `-name` |
+| Command                | Cursor On      | Result                               |
+| :--------------------- | :------------- | :----------------------------------- |
+| `ls -la`               | `ls`           | Opens `man ls`                       |
+| `ls -la`               | `-la`          | Opens `man ls`, jumps to `-l`        |
+| `git commit --amend`   | `commit`       | Opens `man git-commit`               |
+| `grep --color=auto`    | `--color=auto` | Opens `man grep`, jumps to `--color` |
+| `cat file \| sort -r`  | `-r`           | Opens `man sort`, jumps to `-r`      |
+| `find . -name "*.txt"` | `-name`        | Opens `man find`, jumps to `-name`   |
 
 <br>
 
